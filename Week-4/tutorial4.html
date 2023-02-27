@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>University Registration Form</title>
+		<style>
+			body {
+				background-color: antiquewhite;
+				text-size-adjust: 5px;
+			}
+			h1, h3 {
+				text-align: center;
+			}
+			#birthid, #course {
+				padding-left: 50px;
+			}
+            fieldset {
+                background-color: #38bcc1;
+				width: 900px;
+				position: relative;
+				left: 20%;
+				right: inherit;
+            }
+			label {
+				width: 200px;
+				display: inline-block;
+			}
+			#birthid label {
+				width: 70px;
+				display: inline-block;
+			}
+            .newclass {
+				display: inline;
+				padding-left: 15%;
+			}
+		</style>
+    </head>
+    <body>
+		<h1>University Registration Form</h1>
+		<h3>2023/2024 Academic Year</h3>
+		<br>
+        <form>
+			<fieldset>
+				<legend style="background-color: gray; color: white;">Personal Data</legend>
+				<label for="firstname">First Name :</label>
+				<input type="text" name="firstname" id="firstname" placeholder="First Name" align="right">
+				<br><br>
+				<label for="lastname">Last Name :</label>
+				<input type="text" name="lastname" id="lastname" placeholder="Last Name">
+				<br><br>
+				<label for="lastname">Middle Names :</label>
+				<input type="text" name="lastname" id="lastname" placeholder="Middle Name">
+				<br><br>
+				<label for="initialname">Name with Initials :</label>
+				<input type="text" name="initialname" id="initialname">
+				<br><br>
+				<label for="reference">Reference Number :</label>
+				<input type="pin" name="reference" id="reference" size="8" value="12345678">
+				<br>
+				<p>Date of Birth :</p>
+				<div id="birthid">
+					<label for="birthdate">Date :</label>
+					<input type="text" name="birthdate" id="birthdate" size="2" value="XX">
+					<label for="birthmonth">Month :</label>
+					<input type="text" name="birthmonth" id="birthmonth" size="2" value="XX">
+					<label for="birthdate">Year :</label>
+					<input type="text" name="birthyear" id="birthyear" size="4"value="XXXX">
+				</div>
+				<br><br>
+				<label for="daybirth">Date of Birth :</label>
+				<input type="date" name="daybirth" id="daybirth" value="2000-01-01">
+			</fieldset>
+            <fieldset style="background-color: red;">
+                <form>
+                    <input type="submit" name="button3">
+                </form>
+            </fieldset> 
+			<br><br>
+			<label for="comments">Your Feedback :</label><br>
+			<textarea name="comments" id="comments"></textarea>
+			<br><br>
+			<label for="undergrad">Undergrduate Studies :</label>
+			<input type="radio" name="undergrad" id="undergrad">
+			<br><br>
+			<div id="course">
+				<label for="uncourse">Course :</label>
+				<select name="uncourse" id="uncourse">
+					<option value="cs">Computer Science</option>
+					<option value="se">Software Engineering</option>
+					<option value="ai">Artificial Intelligence</option>
+				</select>
+			</div>
+			<br>
+			<label for="undergrad">Postgraguate Studies :</label>
+			<input type="radio" name="undergrad" id="postgrad">
+			<br><br>
+			<label for="address">Address :</label><br>
+			<textarea name="address" id="address" rows="5"></textarea>
+        </form>
+    </body>
+</html>
