@@ -16,22 +16,56 @@
 			}
             fieldset {
                 background-color: #38bcc1;
-				width: 900px;
+				width: 800px;
 				position: relative;
-				left: 20%;
+				left: 23%;
 				right: inherit;
             }
 			label {
 				width: 200px;
 				display: inline-block;
 			}
-			#birthid label {
-				width: 70px;
+			#birthid input {
+				text-align: center;
+			}
+			#birthid_label {
+				width: 40px;
 				display: inline-block;
+			}
+			#birthmonth_label {
+				width: 55px;
+				display: inline-block;
+			}
+			#birthid input {
+				margin-right: 20px;
 			}
             .newclass {
 				display: inline;
 				padding-left: 15%;
+			}
+			.course label{
+				width: 150px;
+				display: inline-block;
+				margin-left: 50px;
+			}
+			textarea {
+				padding-bottom: 50px;
+			}
+			select {
+				width: 220px;
+			}
+			.submitbar {
+				display: flex;
+				flex-direction: row-reverse;
+				padding: 0px 30px;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.submitbar input {
+				width: 80px;
+			}
+			textarea {
+				width: 215px;
 			}
 		</style>
     </head>
@@ -40,62 +74,128 @@
 		<h3>2023/2024 Academic Year</h3>
 		<br>
         <form>
+
 			<fieldset>
 				<legend style="background-color: gray; color: white;">Personal Data</legend>
+
 				<label for="firstname">First Name :</label>
 				<input type="text" name="firstname" id="firstname" placeholder="First Name" align="right">
 				<br><br>
+
 				<label for="lastname">Last Name :</label>
 				<input type="text" name="lastname" id="lastname" placeholder="Last Name">
 				<br><br>
+
 				<label for="lastname">Middle Names :</label>
 				<input type="text" name="lastname" id="lastname" placeholder="Middle Name">
 				<br><br>
+
 				<label for="initialname">Name with Initials :</label>
 				<input type="text" name="initialname" id="initialname">
 				<br><br>
+
+				<label for="nationality">Nationality :</label>
+				<select name="nationality" id="nationality" style="width: 169px;">
+					<option name="srilankan">Sri Lankan</option>
+					<option name="indian">Indian</option>
+					<option name="maldivian">Maldivian</option>
+					<option name="pakistani">Pakistani</option>
+					<option name="malasian">Malasian</option>
+					<option name="singaporian">Singaporian</option>
+					<option name="indoenishian">Indoenishian</option>
+				</select>
+				<br><br>
+
 				<label for="reference">Reference Number :</label>
-				<input type="pin" name="reference" id="reference" size="8" value="12345678">
+				<input type="pin" name="reference" id="reference" size="8" placeholder="12345678" style="width: 162px;">
 				<br>
+
 				<p>Date of Birth :</p>
 				<div id="birthid">
-					<label for="birthdate">Date :</label>
-					<input type="text" name="birthdate" id="birthdate" size="2" value="XX">
-					<label for="birthmonth">Month :</label>
-					<input type="text" name="birthmonth" id="birthmonth" size="2" value="XX">
-					<label for="birthdate">Year :</label>
-					<input type="text" name="birthyear" id="birthyear" size="4"value="XXXX">
+					<label id="birthid_label" for="birthdate">Date :</label>
+					<input type="text" name="birthdate" id="birthdate" size="2" placeholder="XX">
+					<label id="birthmonth_label" for="birthmonth">Month :</label>
+					<input type="text" name="birthmonth" id="birthmonth" size="2" placeholder="XX">
+					<label id="birthid_label" for="birthdate">Year :</label>
+					<input type="text" name="birthyear" id="birthyear" size="4" placeholder="XXXX">
 				</div>
 				<br><br>
+
 				<label for="daybirth">Date of Birth :</label>
-				<input type="date" name="daybirth" id="daybirth" value="2000-01-01">
+				<input type="date" name="daybirth" id="daybirth" value="2000-01-01" style="width: 165px; text-align: center;">
 			</fieldset>
+
+			<br><br>
+			<fieldset>
+				<legend style="background-color: gray; color: white;">Contact Details</legend>
+
+				<label for="email">Personal Email :</label>
+				<input type="email" name="email" id="email" placeholder="someone@someone.com">
+				<br><br>
+
+				<label for="mobileno">Moblie Number :</label>
+				<input type="tel" name="mobileno" id="mobileno" placeholder="+947XXXXXXXX">
+				<br><br>
+
+				<label for="address">Address :</label>
+				<input type="text" name="addressline1" id="address" placeholder="No.4/2, Woston Lane"><br>
+				<input type="text" name="addressline2" id="address" placeholder="Bordhamshire" style="margin-left: 204px;"><br>
+				<input type="text" name="addressline2" id="address" placeholder="North London" style="margin-left: 204px;"><br>
+				<br>
+
+				<label for="postalcode">Postal Code :</label>
+				<input type="text" name="postalcode" id="postalcode" placeholder="">
+			</fieldset>
+
+			<br><br>
+
+			<fieldset>
+				<legend style="background-color: gray; color: white;">Course Details</legend>
+
+				<label for="underorpost">Undergrduate Studies :</label>
+				<input type="radio" name="underorpost" id="undergrad">
+				<br>
+				<div class="course">
+					<label for="uncourse">Course :</label>
+					<select name="uncourse" id="uncourse">
+						<option value="noselection1">--No Slection--</option>
+						<option value="cs">Computer Science</option>
+						<option value="se">Software Engineering</option>
+						<option value="ai">Artificial Intelligence</option>
+					</select>
+				</div>
+				<br>
+				<label for="underorpost">Postgraguate Studies :</label>
+				<input type="radio" name="underorpost" id="postgrad">
+				<br>
+				<div class="course">
+					<label for="postcourse">Course :</label>
+					<select name="postcourse" id="postcourse">
+						<option value="noselection2">--No Slection--</option>
+						<option value="csf">Cyber Security and Forensics</option>
+						<option value="ase">Advanced Software Engineering</option>
+						<option value="bda">Big Data Analytics</option>
+					</select>
+				</div>
+				<br>
+
+				<label for="comments">Your Feedback :</label><br>
+				<textarea name="comments" id="comments" style="margin-left: 204px;"></textarea>
+			</fieldset>
+			
+
             <fieldset style="background-color: red;">
                 <form>
-                    <input type="submit" name="button3">
+					<div class="submitbar">
+						<div>
+							<input type="submit" name="button3" value="Back">
+							<input type="submit" name="button2" value="Clear">
+							<input type="submit" name="button1">
+						</div>
+						<p></p>
+					</div>
                 </form>
             </fieldset> 
-			<br><br>
-			<label for="comments">Your Feedback :</label><br>
-			<textarea name="comments" id="comments"></textarea>
-			<br><br>
-			<label for="undergrad">Undergrduate Studies :</label>
-			<input type="radio" name="undergrad" id="undergrad">
-			<br><br>
-			<div id="course">
-				<label for="uncourse">Course :</label>
-				<select name="uncourse" id="uncourse">
-					<option value="cs">Computer Science</option>
-					<option value="se">Software Engineering</option>
-					<option value="ai">Artificial Intelligence</option>
-				</select>
-			</div>
-			<br>
-			<label for="undergrad">Postgraguate Studies :</label>
-			<input type="radio" name="undergrad" id="postgrad">
-			<br><br>
-			<label for="address">Address :</label><br>
-			<textarea name="address" id="address" rows="5"></textarea>
         </form>
     </body>
 </html>
