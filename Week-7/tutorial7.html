@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Valentines Flower - Order your floweers online</title>
+        <link rel="stylesheet" href="tutorial7.css">
+        <script>
+
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Valentines Flowers</h1>
+
+            <div class="product">
+                <img src="Images/yellow.jpg" alt="Tulip Flower Bouquet" width=234px height=280px>
+                <div class="description">
+                    <p>Tulip Bouquet</p>
+                    <div class="price">
+                       <p>&pound 24</p> 
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="product">
+                <img src="Images/white-rose.webp" alt="Rose Flower Bouquet" width=234px height=280px>
+                <div class="description">
+                    <p>Rose Bouquet</p>
+                    <div class="price">
+                        <p>&pound 20</p> 
+                     </div>
+                </div>
+            </div>
+    
+            <div class="product">
+                <img src="Images/pink-rose.webp" alt="Tulip Flower Bouquet" width=234px height=280px>
+                <div class="description">
+                    <p>Lilly Bouquet</p>
+                    <div class="price">
+                        <p>&pound 16</p> 
+                     </div>
+                </div>
+                
+            </div>
+
+            <div class="labelOrder">
+                Your Order : 
+                <div class="orderDescription"></div>
+                <div class="product" id="order"></div>
+            </div>
+    
+            <form>
+                <div>
+                    <label for="bouquetOption">Bouquet Options : </label>
+                    <select name="bouquetOption" id="bouquetOption" multiple size="1">
+                        <option value="pleaseSelect">Please Select</option>
+                        <option value="withChampagne">With Champagne</option>
+                        <option value="extra">50% Extra Flowers</option>
+                        <option value="extrawithchampagne">50% Extra With Champagne</option>
+                    </select>
+                    
+                    <label for="color" id="white">White</label>
+                    <input type="radio" name="color" id="white" value="White">
+                    <label for="color" id="pink">Pink</label>
+                    <input type="radio" name="color" id="pink" value="pink">
+                    <label for="color" id="red">Red</label>
+                    <input type="radio" name="color" id="red" value="red">
+                </div>
+                
+                <div>
+                    <input type="button" value="Place Your Order">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
